@@ -1,3 +1,5 @@
+package Model;
+
 public class Account {
 
     // User information
@@ -12,7 +14,9 @@ public class Account {
     private boolean[] status = new boolean[10];
     private String[] subject = new String[10];
     private String[] sender = new  String[10];
-    private String[] reciver = new  String[10];
+    private String[] receiver = new  String[10];
+
+
 
     public Account(String firstName, String lastName, String email, String password, String[] inbox, String[] outbox, boolean[] status, String[] subject, String[] sender, String[] reciver) {
         this.firstName = firstName;
@@ -24,7 +28,7 @@ public class Account {
         this.status = status;
         this.subject = subject;
         this.sender = sender;
-        this.reciver = reciver;
+        this.receiver = reciver;
     }
 
     public Account(String firstName, String lastName, String email, String password) {
@@ -106,11 +110,22 @@ public class Account {
         this.sender = sender;
     }
 
-    public String[] getReciver() {
-        return reciver;
+    public String[] getReceiver() {
+        return receiver;
     }
 
-    public void setReciver(String[] reciver) {
-        this.reciver = reciver;
+    public void setReceiver(String[] receiver) {
+        this.receiver = receiver;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+
 }
